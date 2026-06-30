@@ -1,6 +1,3 @@
-/**
- * Array-based implementation of a Stack (LIFO: Last In First Out).
- */
 public class ArrayStack {
     private final int[] stack;
     private int top;
@@ -12,11 +9,6 @@ public class ArrayStack {
         this.top = -1;
     }
 
-    /**
-     * Push element onto the top of the stack.
-     * Time Complexity: O(1).
-     * Space Complexity: O(1).
-     */
     public void push(int value) {
         if (top == capacity - 1) {
             System.out.println("Stack Overflow! Cannot push " + value);
@@ -25,11 +17,6 @@ public class ArrayStack {
         stack[++top] = value;
     }
 
-    /**
-     * Pop / Remove and return the top element of the stack.
-     * Time Complexity: O(1).
-     * Space Complexity: O(1).
-     */
     public int pop() {
         if (isEmpty()) {
             System.out.println("Stack Underflow! Stack is empty.");
@@ -38,11 +25,6 @@ public class ArrayStack {
         return stack[top--];
     }
 
-    /**
-     * Peek / Return top element without removing it.
-     * Time Complexity: O(1).
-     * Space Complexity: O(1).
-     */
     public int peek() {
         if (isEmpty()) {
             System.out.println("Stack is empty.");

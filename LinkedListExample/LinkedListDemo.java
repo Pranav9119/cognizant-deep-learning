@@ -1,6 +1,3 @@
-/**
- * Demo runner for Singly Linked List.
- */
 public class LinkedListDemo {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();

@@ -1,6 +1,3 @@
-/**
- * Demo runner for Binary Search Tree traversal algorithms.
- */
 public class TreeDemo {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
@@ -15,7 +12,7 @@ public class TreeDemo {
         bst.insert(80);
 
         System.out.print("Inorder traversal:   ");
-        bst.inorder(); // Should print in sorted order: 20 30 40 50 60 70 80
+        bst.inorder();
 
         System.out.print("Preorder traversal:  ");
         bst.preorder();

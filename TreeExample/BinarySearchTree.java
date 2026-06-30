@@ -1,11 +1,7 @@
-/**
- * Binary Search Tree (BST) implementation with node structure and standard recursive traversals.
- */
 public class BinarySearchTree {
 
     private Node root;
 
-    // Node class structure
     public static class Node {
         public int data;
         public Node left;
@@ -18,33 +14,17 @@ public class BinarySearchTree {
         }
     }
 
-    /**
-     * Inserts an element into the BST.
-     * Time Complexity: O(log N) (average), O(N) (worst case if tree is skewed).
-     * Space Complexity: O(log N) average call stack height.
-     */
     public void insert(int data) {
         root = insertRec(root, data);
     }
 
     private Node insertRec(Node root, int data) {
-        if (root == null) {
-            return new Node(data);
-        }
-        if (data < root.data) {
-            root.left = insertRec(root.left, data);
-        } else if (data > root.data) {
-            root.right = insertRec(root.right, data);
-        }
+        if (root == null) return new Node(data);
+        if (data < root.data) root.left = insertRec(root.left, data);
+        else if (data > root.data) root.right = insertRec(root.right, data);
         return root;
     }
 
-    /**
-     * Inorder Traversal (Left, Root, Right).
-     * Yields nodes in ascending order for BST.
-     * Time Complexity: O(N).
-     * Space Complexity: O(H) where H is tree height.
-     */
     public void inorder() {
         inorderRec(root);
         System.out.println();
@@ -58,11 +38,6 @@ public class BinarySearchTree {
         }
     }
 
-    /**
-     * Preorder Traversal (Root, Left, Right).
-     * Time Complexity: O(N).
-     * Space Complexity: O(H).
-     */
     public void preorder() {
         preorderRec(root);
         System.out.println();
@@ -76,11 +51,6 @@ public class BinarySearchTree {
         }
     }
 
-    /**
-     * Postorder Traversal (Left, Right, Root).
-     * Time Complexity: O(N).
-     * Space Complexity: O(H).
-     */
     public void postorder() {
         postorderRec(root);
         System.out.println();

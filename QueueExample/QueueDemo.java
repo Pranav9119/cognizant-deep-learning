@@ -1,6 +1,3 @@
-/**
- * Demo runner for ArrayQueue.
- */
 public class QueueDemo {
     public static void main(String[] args) {
         ArrayQueue queue = new ArrayQueue(5);

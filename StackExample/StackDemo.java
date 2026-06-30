@@ -1,6 +1,3 @@
-/**
- * Demo runner for ArrayStack.
- */
 public class StackDemo {
     public static void main(String[] args) {
         ArrayStack stack = new ArrayStack(5);
@@ -13,7 +10,7 @@ public class StackDemo {
         stack.push(50);
 
         System.out.println("Trying to push one more element (60)...");
-        stack.push(60); // Should overflow
+        stack.push(60);
 
         System.out.println("Peek top element: " + stack.peek());
 
